@@ -36,13 +36,13 @@ bs.color = "#00FF00"
 bs.color = :blue
 
 # make it blink (it's a BLINK stick, after all)
-# color to blink with
+# color to blink with (default: current color)
 bs.blink(color: 'abc123')
 # number of times to blink (default: 1)
 bs.blink(color: 'abc123', blink: 5)
-# change the frequency/intensity of the blink
+# change the frequency/intensity of the blink (default: 0.2)
 bs.blink(color: 'abc123', blink: 5, frequency: 0.8)
-# turns the blink stick off after blink (defaults to previous color otherwise)
+# turns the blink stick off after blink (default: previous color)
 bs.blink(color: 'abc123', turn_off: true)
 
 # random color
