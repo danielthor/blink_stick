@@ -1,3 +1,3 @@
-module BlinkStick
-  VERSION = "0.0.1"
-end
+# module BlinkStick
+#   VERSION = "0.0.1"
+# end
