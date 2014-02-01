@@ -64,12 +64,12 @@ bs.manufacturer
 
 ## TODO
 
-[ ] Finish tests (I'm still learning!)
-[ ] Cleanup code
-[ ] Make sure Color module isn't polluting namespace
-[ ] Validation when setting colors
-[ ] Error handling
-[ ] World domination
+- Finish tests (I'm still learning!)
+- Cleanup code
+- Make sure Color module isn't polluting namespace
+- Validation when setting colors
+- Error handling
+- World domination
 
 ## Contributing
 
