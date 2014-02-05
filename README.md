@@ -6,11 +6,34 @@ Note: This is a work in progress. It does not exist on rubygems.org, yet.
 
 This code is heavily based on [Arvydas Juskevicius](https://github.com/arvydas/) [blinkstick-ruby](https://github.com/arvydas/blinkstick-ruby) code.
 
+## Prerequisites
+
+### Libusb
+Installation of the libusb package under Debian/Ubuntu:
+`sudo apt-get install libusb-1.0-0-dev`
+
+### Udev access
+You will also need to grant access to the device in question.
+
+This can be done as follows:
+
+```sh
+echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"20a0\", ATTR{idProduct}==\"41e5\", MODE:=\"0666\"" | sudo tee /etc/udev/rules.d/85-blinkstick.rules
+```
+
+Then reload the udev rules with:
+
+```sh
+sudo udevadm control --reload-rules
+```
+
+or just reboot your computer.
+
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'blink_stick', :git => 'git://github.com/danielthor/blink_stick.git'
+    gem 'blink_stick', git: 'git://github.com/danielthor/blink_stick.git'
 
 And then execute:
 
