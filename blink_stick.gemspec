@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["daniel.thor@gmail.com"]
   spec.description   = %q{Control your BlinkStick}
   spec.summary       = %q{BlinkStick is a USB-controlled smart pixel}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/danielthor/blink_stick/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "libusb", "~> 0.4"
-  #spec.add_dependency "color", "~> 1.4"
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest"
