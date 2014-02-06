@@ -113,6 +113,8 @@ $ rake console
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+Do not change version number or CHANGELOG.
+
 ## Thanks
 
 To Arvydas Juskevicius for making the BlinkStick and for providing example code to work from, Thanks!
