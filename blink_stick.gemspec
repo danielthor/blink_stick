@@ -5,7 +5,7 @@ require 'blink_stick/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "blink_stick"
-  spec.version       = "0.0.1" #BlinkStick::VERSION
+  spec.version       = BlinkStick::VERSION
   spec.authors       = ["Daniel Thor"]
   spec.email         = ["daniel.thor@gmail.com"]
   spec.description   = %q{Control your BlinkStick}
