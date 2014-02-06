@@ -1,4 +1,4 @@
-module BlinkColor
+module Color
   def self.hex(value)
     # remove hash if exists
     value = value.gsub(/#/, '')
@@ -8,6 +8,6 @@ module BlinkColor
     rgb.push(value[2..3].hex) # green
     rgb.push(value[4..5].hex) # blue
 
-    return rgb
+    rgb
   end
 end
