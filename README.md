@@ -85,6 +85,15 @@ bs.description
 bs.manufacturer
 ```
 
+### Rake console
+
+You can also run it standalone (good for further gem development) by clonig the repository, and running the following in your shell:
+
+```sh
+$ rake console
+```
+
+
 ## TODO
 
 - Finish tests (I'm still learning!)
