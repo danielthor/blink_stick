@@ -41,16 +41,6 @@ And then execute:
 
 ## Usage
 
-### Stand-alone
-
-Run the following in your console:
-
-```sh
-$ rake console
-```
-
-### General usage
-
 ```ruby
 # list all blink sticks
 BlinkStick.find_all
@@ -94,6 +84,15 @@ bs.description
 # manufacturer (Agile Innovative Ltd)
 bs.manufacturer
 ```
+
+### Rake console
+
+You can also run it standalone (good for further gem development) by clonig the repository, and running the following in your shell:
+
+```sh
+$ rake console
+```
+
 
 ## TODO
 
