@@ -41,6 +41,16 @@ And then execute:
 
 ## Usage
 
+### Stand-alone
+
+Run the following in your console:
+
+```sh
+$ rake console
+```
+
+### General usage
+
 ```ruby
 # list all blink sticks
 BlinkStick.find_all
