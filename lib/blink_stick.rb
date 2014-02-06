@@ -52,17 +52,18 @@ class BlinkStick
     @handle = @device.open
   end
 
-  def blink(options = {})
+  def blink(blink_color = nil, options = {})
     current_color = self.color
-    # TODO: make it color_or_options to default to just entering a color to blink
+
+    blink_color = [0,0,0] if blink_color.nil?
+
     options = {
-      color: current_color,
       blink: 1,
       frequency: 0.2,
       turn_off: false
     }.merge(options)
 
-    perform_blink(options, current_color)
+    perform_blink(blink_color, current_color, options)
   end
 
   def serial
@@ -79,11 +80,11 @@ class BlinkStick
 
   private
 
-  def perform_blink(options, current_color)
+  def perform_blink(blink_color, current_color, options)
     options[:blink].times do
       sleep options[:frequency]
 
-      self.color = options[:color]
+      self.color = blink_color
 
       sleep options[:frequency]
 
