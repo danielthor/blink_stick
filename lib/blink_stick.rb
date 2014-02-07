@@ -1,9 +1,11 @@
 require 'libusb'
 require 'color'
 require 'blink_stick/version'
+require 'blink_stick/action_handler'
 require 'blink_stick/color_handler'
 
 class BlinkStick
+  include BlinkStick::ActionHandler
   include BlinkStick::ColorHandler
 
   VENDOR_ID  = 0x20A0
@@ -52,20 +54,6 @@ class BlinkStick
     @handle = @device.open
   end
 
-  def blink(blink_color = nil, options = {})
-    current_color = self.color
-
-    blink_color = [0,0,0] if blink_color.nil?
-
-    options = {
-      blink: 1,
-      frequency: 0.2,
-      turn_off: false
-    }.merge(options)
-
-    perform_blink(blink_color, current_color, options)
-  end
-
   def serial
     @device.serial_number
   end
@@ -76,23 +64,5 @@ class BlinkStick
 
   def description
     @device.product
-  end
-
-  private
-
-  def perform_blink(blink_color, current_color, options)
-    options[:blink].times do
-      sleep options[:frequency]
-
-      self.color = blink_color
-
-      sleep options[:frequency]
-
-      if options[:turn_off]
-        self.off
-      else
-        self.color = current_color
-      end
-    end
   end
 end
