@@ -2,7 +2,7 @@
 
 [BlinkStick](http://blinkstick.com) is a USB-controlled smart pixel. This gem will help you control it.
 
-Note: This is a work in progress. It does not exist on rubygems.org, yet.
+Note: This is a work in progress.
 
 This code is heavily based on [Arvydas Juskevicius](https://github.com/arvydas/) [blinkstick-ruby](https://github.com/arvydas/blinkstick-ruby) code.
 
@@ -33,7 +33,7 @@ or just reboot your computer.
 
 Add this line to your application's Gemfile:
 
-    gem 'blink_stick', git: 'git://github.com/danielthor/blink_stick.git'
+    gem 'blink_stick'
 
 And then execute:
 
