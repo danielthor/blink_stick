@@ -2,6 +2,7 @@ require 'libusb'
 require 'color'
 require 'blink_stick/version'
 require 'blink_stick/action_handler'
+require 'blink_stick/action_handler/fade_action'
 require 'blink_stick/color_handler'
 
 class BlinkStick

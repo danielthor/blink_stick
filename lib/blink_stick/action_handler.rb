@@ -1,4 +1,6 @@
 module BlinkStick::ActionHandler
+  require 'blink_stick/action_handler/fade_action'
+
   def blink(blink_color = nil, options = {})
     current_color = self.color
 
@@ -11,6 +13,31 @@ module BlinkStick::ActionHandler
     }.merge(options)
 
     perform_blink(blink_color, current_color, options)
+  end
+
+  def fade(color1, color2, options = {})
+    parser = ->(color) { Color.parse(color) }
+
+    color1 = parser.call(color1)
+    color2 = parser.call(color2)
+
+    FadeAction.call self, color1, color2, options
+  end
+
+  def random_pulse(n)
+    pulse send(:random_rgb), n
+  end
+
+  def pulse(color = [255, 255, 255], n = 2)
+    self.off
+
+    start_value = [0, 0, 0]
+    end_value = color
+
+    n.times do
+      fade start_value, end_value
+      fade end_value, start_value
+    end
   end
 
   private

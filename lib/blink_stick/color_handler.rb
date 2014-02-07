@@ -24,11 +24,15 @@ module BlinkStick::ColorHandler
   end
 
   def random_color
-    r = Random.new
-    self.color = [r.rand(255), r.rand(255), r.rand(255)]
+    self.color = random_rgb
   end
 
   private
+
+  def random_rgb
+    r = Random.new
+    [r.rand(255), r.rand(255), r.rand(255)]
+  end
 
   def transform_color_to_hex(value)
     1.chr + value[0].chr + value[1].chr + value[2].chr
