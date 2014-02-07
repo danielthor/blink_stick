@@ -117,4 +117,6 @@ Do not change version number or CHANGELOG.
 
 ## Thanks
 
-To Arvydas Juskevicius for making the BlinkStick and for providing example code to work from, Thanks!
+To [Arvydas Juskevicius](https://github.com/arvydas/) for making the [BlinkStick](http://blinkstick.com) and for providing [example code](https://github.com/arvydas/blinkstick-ruby/) to work from, Thanks!
+
+And [Björn Skarner](https://github.com/bjoska/) for helping me taking the gem one step further and for teaching me how to make tests. Thanks!
