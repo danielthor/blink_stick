@@ -9,9 +9,12 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Daniel Thor", "Björn Skarner"]
   spec.email         = ["daniel.thor@gmail.com"]
   spec.description   = %q{Control your BlinkStick}
-  spec.summary       = %q{BlinkStick is a USB-controlled smart pixel}
+  spec.summary       = %q{BlinkStick is a USB-controlled smart pixel by Agile Innovative. This gem helps you control it.}
   spec.homepage      = "https://github.com/danielthor/blink_stick/"
   spec.license       = "MIT"
+  spec.metadata      = { "issue_tracker" => "https://github.com/danielthor/blink_stick/issues" }
+
+  spec.requirements  << "An Agile Innovative BlinkStick available at http://blinkstick.com"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
