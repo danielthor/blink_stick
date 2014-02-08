@@ -6,7 +6,7 @@ require 'blink_stick/version'
 Gem::Specification.new do |spec|
   spec.name          = "blink_stick"
   spec.version       = BlinkStick::VERSION
-  spec.authors       = ["Daniel Thor"]
+  spec.authors       = ["Daniel Thor", "Björn Skarner"]
   spec.email         = ["daniel.thor@gmail.com"]
   spec.description   = %q{Control your BlinkStick}
   spec.summary       = %q{BlinkStick is a USB-controlled smart pixel}
