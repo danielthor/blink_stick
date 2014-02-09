@@ -13,6 +13,11 @@ module BlinkStick::ActionHandler
     perform_blink(blink_color, current_color, options)
   end
 
+  # fade from one color to another
+  # TODO: going from one color to another that is "far away" in a short amount of time
+  #       will give you I/O problems. Libusb (of if it's USB itself) can't handle the
+  #       speed and number of operations
+  #       create some kind of "break" so it will skip some color values on the way
   def fade(color1, color2, options = {})
     options = { time: 5 }.merge(options)
 
