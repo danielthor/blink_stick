@@ -48,10 +48,12 @@ module BlinkStick::ActionHandler
       sleep sleepy_time
 
       # set values depending on if it's "time to move"
-      # this will essentially make all the color vectors move at the same pace
-      # greatest distance to travel changes color/moves each loop
-      # while least distance only relative
-      # don't know how else to explain it :(
+      # this will essentially make all the color vectors move so they
+      # will arrive at their final destination at the same time
+      # the vector with the greatest distance to travel moves each loop
+      # while the others only relative to the greatest distance
+      # i.e. only some of the loops
+      # don't know how to explain this better :(
       r = r + direction_r if (i % (delta_max/delta_r.abs)) == 0
       g = g + direction_g if (i % (delta_max/delta_g.abs)) == 0
       b = b + direction_b if (i % (delta_max/delta_b.abs)) == 0
