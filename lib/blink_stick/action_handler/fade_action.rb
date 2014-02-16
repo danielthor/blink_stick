@@ -46,7 +46,7 @@ class BlinkStick::ActionHandler::FadeAction
   end
 
   def perform
-    1.upto(delta_max) do |n|
+    1.upto(distance) do |n|
       sleep sleepy_time
       apply_change n
       @blink_stick.color = current_color
@@ -62,7 +62,7 @@ class BlinkStick::ActionHandler::FadeAction
   end
 
   def increase_color?(n, delta)
-    (n % (delta_max.to_f / delta.to_f)).to_i == 0
+    (n % (distance.to_f / delta.to_f)).to_i == 0
   end
 
   def start_color
@@ -73,8 +73,9 @@ class BlinkStick::ActionHandler::FadeAction
     [@red, @green, @blue]
   end
 
-  def delta_max
-    @delta_max ||= [delta_red, delta_green, delta_blue].max
+  # find the greatest distance to travel between the two points
+  def distance
+    @distance ||=  Math.sqrt(delta_red**2 + delta_green**2 + delta_blue**2)
   end
 
   def find_direction(values)
@@ -94,6 +95,6 @@ class BlinkStick::ActionHandler::FadeAction
   end
 
   def sleepy_time
-    @options[:time].to_f / delta_max.to_f
+    @options[:time].to_f / distance.to_f
   end
 end
