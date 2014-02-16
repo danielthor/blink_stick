@@ -24,7 +24,7 @@ module BlinkStick::ActionHandler
     FadeAction.call self, color1, color2, options
   end
 
-  def random_pulse(n)
+  def random_pulse(n = 2)
     pulse send(:random_rgb), n
   end
 
