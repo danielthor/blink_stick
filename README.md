@@ -76,6 +76,16 @@ bs.random_color
 # turn it off
 bs.off
 
+# fade between two colors (see above for accepted color values)
+bs.fade([255, 0, 0], [0, 255, 0])
+# time it should take (default: 0.5)
+bs.fade([255, 0, 0], [0, 255, 0], time: 2)
+
+# pulse color (default: [255, 255, 255]) - think Apple sleep light
+bs.pulse([1,2,3])
+# number of times to pulsate (default: 2)
+bs.pulse(:red, times: 1)
+
 # get serial
 # ex: BS000563-1.1
 bs.serial
