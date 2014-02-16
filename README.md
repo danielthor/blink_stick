@@ -4,7 +4,7 @@
 
 Note: This is a work in progress.
 
-This code is heavily based on [Arvydas Juskevicius](https://github.com/arvydas/) [blinkstick-ruby](https://github.com/arvydas/blinkstick-ruby) code.
+This code is based on [Arvydas Juskevicius](https://github.com/arvydas/) [blinkstick-ruby](https://github.com/arvydas/blinkstick-ruby) code.
 
 ## Prerequisites
 
